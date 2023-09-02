@@ -21,9 +21,31 @@ var possuiDoutorado = false;
 var empregoFuturo;
 var dinheiroNaConta = 0;
 
+console.log(
+  !!nome,
+  !!idade,
+  !!possuiDoutorado,
+  !!empregoFuturo,
+  !!dinheiroNaConta
+);
+
 // Compare o total de habitantes do Brasil com China (valor em milhões)
 var brasil = 207;
 var china = 1340;
+
+if (brasil > china) {
+  totaldif = brasil - china;
+  console.log(
+    `A diferança de habitantes do brasil é ${totaldif} maior que a da china`
+  );
+} else if (brasil < china) {
+  totaldif = china - brasil;
+  console.log(
+    `A diferança de habitantes da china é ${totaldif} maior que a do Brasil`
+  );
+} else if (china === brasil) {
+  console.log("É igual");
+}
 
 // O que irá aparecer no console?
 if ("Gato" === "gato" && 5 > 2) {
