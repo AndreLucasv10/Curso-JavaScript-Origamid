@@ -1,8 +1,11 @@
 // Mostre no console cada parágrado do site
+
 const paragrafos = document.querySelectorAll('p')
 console.log(paragrafos)
 paragrafos.forEach( item => console.log(item));
+
 // Mostre o texto dos parágrafos no console
+
 paragrafos.forEach((item) => {
     console.log(item.innerText)
 })
