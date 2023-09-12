@@ -54,4 +54,14 @@ return PopularFlavour
 console.log(totalVotos([0, 2, 3, 4, 4]))
 
 
+//Exemplo 4
+
+const small = window.matchMedia('(max-width: 600px)').matches;
+
+if(small){
+    console.log('Usúario Mobile')
+} else{
+    console.log('Usúario Desktop')
+
+}
 
