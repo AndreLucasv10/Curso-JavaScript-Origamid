@@ -7,13 +7,16 @@ const linkInterno = document.querySelectorAll('a[href^="#"]');
 console.log(linkInterno);
 
 function handleLinkInterno(event) {
+  event.preventDefault();
+
   linkInterno.forEach((link) => {
     link.classList.remove("ativo");
   });
   event.target.classList.toggle("ativo");
-
-  window.addEventListener("click", handleLinkInterno);
 }
+linkInterno.forEach((link) => {
+  link.addEventListener("click", handleLinkInterno);
+});
 
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
@@ -27,7 +30,7 @@ doom.addEventListener("click", callback);
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
 function remove(event) {
-  event.target.remove(doom);
+  // event.target.remove(doom);
 }
 
 doom.addEventListener("click", remove);
