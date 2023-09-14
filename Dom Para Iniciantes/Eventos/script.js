@@ -25,8 +25,8 @@ function callback(event) {
 const animaisLista = document.querySelector(".animais-lista");
 
 function callbackLista(event) {
-  console.log(event.currentTarget);
-  console.log(event.target);
+  //console.log(event.currentTarget);
+  // console.log(event.target);
 }
 
 animaisLista.addEventListener("click", callbackLista);
@@ -52,7 +52,7 @@ function mouseHandle(Event) {
 
 h1.addEventListener("mouseenter", mouseHandle);
 
-window.addEventListener("scroll", callback);
+// window.addEventListener("scroll", callback);
 
 // Exemplo 7
 
@@ -63,3 +63,15 @@ function handleKeyboard(event) {
 }
 
 window.addEventListener("keydown", handleKeyboard);
+
+// Exemplo 8
+
+const imgs = document.querySelectorAll("img");
+
+function handleImg(event) {
+  console.log(event.currentTarget.getAttribute("src"));
+}
+
+imgs.forEach((img) => {
+  img.addEventListener("click", handleImg);
+});
