@@ -1,7 +1,7 @@
 const animaisLista = document.querySelector(".animais-descricao");
 // Exemplo 1
 
-const h1 = document.querySelector("h1");
+//const h1 = document.querySelector("h1");
 
 //h1.innerHTML = "<p>Novo titulo</p>";
 
@@ -24,9 +24,25 @@ console.log(lista.previousSibling);
 const animais = document.querySelector(".animais");
 const contato = document.querySelector(".contato");
 const titulo = contato.querySelector(".titulo");
-
+const mapa = document.querySelector(".mapa");
 //animais.appendChild(titulo);
 
 //Exemplo 4
 
-contato.insertBefore(animais, titulo);
+//contato.replaceChild(animaisLista, titulo);
+//contato.insertBefore(animais, titulo);
+
+//const novoh1 = document.createElement("h1");
+
+//novoh1.innerText = "Novo título";
+//novoh1.classList.add("titulo");
+
+//mapa.appendChild(novoh1);
+//console.log(novoh1);
+
+// Exemplo 5
+
+const h1 = document.querySelector("h1");
+const faq = document.querySelector(".faq");
+const cloneH1 = h1.cloneNode(true);
+faq.appendChild(cloneH1);
