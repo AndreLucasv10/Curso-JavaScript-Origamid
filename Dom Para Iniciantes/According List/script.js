@@ -1,37 +1,33 @@
-//Exemplo 1
+function initTabNav() {
+  const tabMenu = document.querySelectorAll(".js-tabmenu li");
+  const tabcontent = document.querySelectorAll(".js-tabcontent section");
+  if (tabMenu.length && tabcontent.length) {
+    tabcontent[0].classList.add("ativo");
+    function activeTab(index) {
+      tabcontent.forEach((section) => {
+        section.classList.remove("ativo");
+      });
+      tabcontent[index].classList.add("ativo");
+    }
 
-const animais = document.getElementById('animais')
-console.log(animais)
-
-// Exemplo 2
-
-const gridSection = document.getElementsByClassName('grid-section')
-console.log(gridSection)
-
-//Exemplo 2
-
-const primeiraLi = document.querySelector('li')
-console.log(primeiraLi)
-
-//Exemplo 3
-
-const linksInterno = document.querySelector('[href^="#"')
-console.log(linksInterno)
-
-// Exemplo 4 
-
-const animaisImg = document.querySelectorAll('.animais img')
-console.log(animaisImg)
-
-//Exemplo 5
-
-const gridSectionHTML = document.getElementsByClassName('grid-section')
-console.log(gridSectionHTML)
-const gridSectionNode = document.querySelectorAll('.grid-section')
-console.log(gridSectionNode)
-
-gridSectionNode.forEach(function(item,index){
-console.log(item)
-})
-
-const arrayGrid = Array.from(gridSectionHTML)
+    tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener("click", function () {
+        activeTab(index);
+      });
+    });
+  }
+}
+initTabNav();
+function initAccordion() {
+  const accordionList = document.querySelectorAll(".js-accordion dt");
+  accordionList[0].classList.add("ativo");
+  accordionList[0].nextElementSibling.classList.add("ativo");
+  function activeAccordion() {
+    this.classList.toggle("ativo");
+    this.nextElementSibling.classList.toggle("ativo");
+  }
+  accordionList.forEach((item) => {
+    item.addEventListener("click", activeAccordion);
+  });
+}
+initAccordion();
