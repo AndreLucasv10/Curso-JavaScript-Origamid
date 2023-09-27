@@ -1,16 +1,41 @@
-// Retorne no console todas as imagens do site
-const imagens = document.querySelectorAll('img')
-console.log(imagens)
-// Retorne no console apenas as imagens que começaram com a palavra imagem
-const imagemUnicas = document.querySelectorAll('img[src^="img/imagem"]')
-console.log(imagemUnicas)
-// Selecione todos os links internos (onde o href começa com #)
-const linkInternos = document.querySelectorAll('[href^="#"]')
-console.log(linkInternos)
-// Selecione o primeiro h2 dentro de .animais-descricao
-const primeiroH2 = document.querySelector('.animais-descricao h2')
-console.log(primeiroH2.innerHTML)
-// Selecione o último p do site
+// Transforme o objeto abaixo em uma Constructor Function
+function Pessoa(nome, idade) {
+  (this.nome = nome),
+    (this.idade = idade),
+    (this.andar = function () {
+      console.log(this.nome + "andou");
+    });
+}
+const andre = new Pessoa("André", 22);
+// Crie 3 pessoas, João - 20 anos,
+// Maria - 25 anos, Bruno - 15 anos
 
-const ultimoP = document.querySelectorAll('p')
-console.log(ultimoP[ultimoP.length - 1])
+const joao = new Pessoa("João", 22);
+const maria = new Pessoa("Maria", 20);
+const Bruno = new Pessoa("Bruno", 15);
+
+// Crie uma Constructor Function (Dom) para manipulação
+// de listas de elementos do dom. Deve conter as seguintes
+// propriedades e métodos:
+//
+function Dom(seletor) {
+  (this.element = function () {
+    return document.querySelectorAll(seletor);
+  }),
+    (this.ativar = function () {
+      this.element().forEach((item) => {
+        item.classList.add("ativar");
+      });
+    }),
+    (this.remove = function () {
+      this.element().forEach((item) => {
+        item.classList.remove();
+      });
+    });
+}
+const li = new Dom("li");
+
+console.log(li.ativar());
+// elements, retorna NodeList com os elementos selecionados
+// addClass(classe), adiciona a classe a todos os elementos
+// removeClass(classe), remove a classe a todos os elementos
