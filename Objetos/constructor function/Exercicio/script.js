@@ -3,7 +3,7 @@ function Pessoa(nome, idade) {
   (this.nome = nome),
     (this.idade = idade),
     (this.andar = function () {
-      console.log(this.nome + "andou");
+      console.log(this.nome + " andou");
     });
 }
 const andre = new Pessoa("André", 22);
