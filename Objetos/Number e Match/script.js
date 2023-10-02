@@ -14,7 +14,13 @@ const listaPrecos = ['R$ 59,99', ' R$ 100,222',
     'R$ 230  ', 'r$  200']
 
 function limparPreco(preco) {
-    preco = +preco.toUpperCase().replace('R$', '').trim().replace(',', '.')
-    console.log(preco)
+    let total = 0
+    preco.forEach(item => {
+        let valorlimpo = (parseFloat(item.toUpperCase().replace('R$', '').trim()))
+
+        total = total + valorlimpo
+
+    });
+    return total
 }
-limparPreco(listaPrecos)
+console.log(limparPreco(listaPrecos))
