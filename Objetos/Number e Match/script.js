@@ -17,9 +17,7 @@ function limparPreco(preco) {
     let total = 0
     preco.forEach(item => {
         let valorlimpo = (parseFloat(item.toUpperCase().replace('R$', '').trim()))
-
         total = total + valorlimpo
-
     });
     return total
 }
