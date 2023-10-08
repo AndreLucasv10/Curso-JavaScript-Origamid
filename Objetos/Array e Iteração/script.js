@@ -74,7 +74,24 @@ const maiorNumero = numero.reduce((anterior,atual)=>{
         return atual
     }
 })
-console.log(maiorNumero)
-//////////////////////////////////////////////////////////////////////
+//console.log(maiorNumero)
 
-console.log('HAHAHAHA')
+///////////////////////////////////////////////
+
+const frutas = ['Banana', 'Pêra', 'Uva']
+
+const temUva = frutas.some((item) =>{
+  return item === 'Pêra';
+})
+
+const every = frutas.every((fruta) =>{
+  return fruta
+})
+console.log(temUva)
+console.log(every)
+
+const indexUva = frutas.findIndex(item =>{
+  return item === 'Uva'
+})
+
+console.log(indexUva)
