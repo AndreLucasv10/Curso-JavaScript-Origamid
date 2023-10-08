@@ -75,3 +75,6 @@ const maiorNumero = numero.reduce((anterior,atual)=>{
     }
 })
 console.log(maiorNumero)
+//////////////////////////////////////////////////////////////////////
+
+console.log('HAHAHAHA')
