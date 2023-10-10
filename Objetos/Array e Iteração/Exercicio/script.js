@@ -42,7 +42,7 @@ const compras = [
   },
   {
     item: 'Carne',
-    preco: 'R$ 25,49'
+    preco: 'R$ 25,44'
   },
   {
     item: 'Refrigerante',
