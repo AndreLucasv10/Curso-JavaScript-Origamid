@@ -2,12 +2,10 @@
 // parágrafos acima utilizando reduce
 
 const paragrafos = document.querySelector('section').innerText
-console.log(paragrafos)
 const resultado = paragrafos.split('').reduce((acumulador) =>{
   return acumulador + 1
 }, 0)
 console.log(resultado)
-
 
 const Paragrafos = document.querySelectorAll('p')
 const totalCaracteres = Array.prototype.reduce.call(Paragrafos, (acumulador , item) =>{
