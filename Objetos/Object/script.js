@@ -73,4 +73,6 @@ const motos = {
   })
   console.log(motos)
 
-  motos.rodas = 4
+  // Object.getOwnPropertyDescriptors(Array)
+//Simplismente mostra todas as funções e propriedades de um objeto
+console.log(Object.getOwnPropertyDescriptors(Array))
