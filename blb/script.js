@@ -11,3 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 });
 meuBotao()
+const estudo
+const andre = 'André não estudou'
+if( andre )
