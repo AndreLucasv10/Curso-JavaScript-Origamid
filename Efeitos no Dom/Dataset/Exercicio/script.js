@@ -1,16 +1,13 @@
-// Retorne no console todas as imagens do site
-const imagens = document.querySelectorAll('img')
-console.log(imagens)
-// Retorne no console apenas as imagens que começaram com a palavra imagem
-const imagemUnicas = document.querySelectorAll('img[src^="img/imagem"]')
-console.log(imagemUnicas)
-// Selecione todos os links internos (onde o href começa com #)
-const linkInternos = document.querySelectorAll('[href^="#"]')
-console.log(linkInternos)
-// Selecione o primeiro h2 dentro de .animais-descricao
-const primeiroH2 = document.querySelector('.animais-descricao h2')
-console.log(primeiroH2.innerHTML)
-// Selecione o último p do site
+// Adicione um atributo data-anime="show-down" e
+// data-anime="show-right" a todos as section's
+// com descricão dos animais.
 
-const ultimoP = document.querySelectorAll('p')
-console.log(ultimoP[ultimoP.length - 1])
+// Utilizando estes atributos, adicione a classe
+// show-down ou show-right a sua respectiva section
+// assim que a mesma aparecer na tela (animacao tab)
+
+// No CSS faça com que show-down anime de cima para baixo
+// e show-right continue com a mesma animação da esquerda
+// para a direita
+
+// Substitua todas as classes js- por data atributes.
