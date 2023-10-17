@@ -9,8 +9,4 @@ document.addEventListener("DOMContentLoaded", function() {
         meuBotao.style.left = novaPosicaoX + "px";
         meuBotao.style.top = novaPosicaoY + "px";
     };
-});
-meuBotao()
-const estudo
-const andre = 'André não estudou'
-if( andre )
+})
