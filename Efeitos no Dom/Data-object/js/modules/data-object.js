@@ -13,4 +13,8 @@ const horaAgora = dataAgora.getHours()
 const teste = [1,2,3,4,5].indexOf(5)
 
 const semanaAberto = diasSemana.indexOf(diaAgora) !== -1
-console.log(semanaAberto)
+const horarioAberto = horaAgora >= horarioSemana[0] && horaAgora < horarioSemana
+
+if (semanaAberto && horarioAberto){
+  funcionamento.classList.add('aberto')
+}

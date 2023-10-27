@@ -319,3 +319,13 @@ body {
     grid-column: 1;
   }
 }
+
+.aberto::after {
+  display: inline-block;
+  content: 'Aberto';
+  width: 8px;
+  height: 8px;
+  background: #3f4;
+  border-radius: 50%;
+  margin-left: 4px;
+}
