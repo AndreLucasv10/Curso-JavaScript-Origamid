@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      align-self: center;
+      margin-top: 40vh;
+      font-family: 'IBM Plex Mono', monospace;
+
+    }
+
+    .btc {
+      display: block;
+    }
+
+
+    label {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    input {
+      border-color: black;
+      padding: 14px;
+      font-size: 1.25rem;
+
+
+    }
+
+    #enviar {
+      border: none;
+      color: white;
+      background: orangered;
+      padding: 20px;
+      border-radius: 30%;
+      cursor: pointer;
+    }
+
+    .lista {
+      display: block;
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .list-style {
+      margin-top: 16px;
+      font-weight: bold;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>Preço BTC</h2>
+    <P class="btc"></P>
+  </div>
+  <div>
+    <form>
+      <label for="cep">Cep</label>
+      <input type="text" name="cep" id="cep">
+      <input type="submit" value="enviar" id="enviar">
+    </form>
+
+    <div class="resultado-cep">
+      <ul class="lista">
+        <li class="cidade list-style"></li>
+        <li class="bairro list-style"></li>
+        <li class="rua list-style"></li>
+        <li class="ddd list-style"></li>
+        <li class="uf list-style"></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="piada"></p>
+      <button class="proxima">Proxima</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
