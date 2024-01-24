@@ -1,10 +1,6 @@
-async function puxarDados(){
-  const responseDados =  fetch('./dados.json')
-  const responseClientes = await fetch('./clientes.json')
-
-  const jsonDados = await ( await responseDados).json()
-  const jsonClientes = await ( await responseClientes).json()
-  console.log(jsonDados)
-  console.log(jsonClientes)
+async function puxarDados() {
+  const responseDados = await fetch('dados.json');
+  const jsonDados = await responseDados.json();
+  console.log(jsonDados.aula)
 }
 puxarDados()
